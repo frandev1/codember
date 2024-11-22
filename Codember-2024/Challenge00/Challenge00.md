@@ -8,7 +8,7 @@ Te voy a dar una lista de números y, al lado, los movimientos que debes hacer e
 estos números. Imagina los candados numéricos esos que van con combinaciones.
 
 <p align="center">
-  <img src="https://codember.dev/candado.webp" alt="Candado numérico" style="max-width: 320px;width:100%;height:auto;margin:0 auto;border-radius:1px;">
+  <img src="../../images/candado.webp" alt="Candado numérico" style="max-width: 320px;width:100%;height:auto;margin:0 auto;border-radius:1px;">
 </p>
 
 El número de la izquierda es la combinación inicial y las cadenas
