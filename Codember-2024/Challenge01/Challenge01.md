@@ -23,9 +23,9 @@ a123     -> false (un número después de una letra)
 dbce     -> false (una "d" y después una "b")
 ```
 
-Accede a este log.txt con una lista de intentos y con
+Accede a este [log.txt](log.txt) con una lista de intentos y con
 un programa cuenta cuántos han sido inválidos y cuántos
-válidos. Envía la respuesta usando el comando submit.
+válidos. Envía la respuesta usando el comando **submit**.
 
 Por ejemplo, si hay 10 intentos válidos y 5
 inválidos envía el comando submit **10true5false**
