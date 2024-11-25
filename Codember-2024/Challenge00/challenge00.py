@@ -41,7 +41,7 @@ def descifrar(num : str, code: str):
                 res[pos] = str(act)
             case 'D':
                 if act == 0:
-                    act = 9
+                    act = 9;
                 else:
                     act -= 1;
                 res[pos] = str(act)
