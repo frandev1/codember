@@ -5,4 +5,4 @@
 # Codember.dev
 </div>
 
-Resolución de retos y pistas de los secretos que encontré del juego [codember.dev](https://codember.dev/) creado por [@midudev](https://github.com/midudev/) para la comunidad.
+Resolución de retos que encontré del juego [codember.dev](https://codember.dev/) creado por [@midudev](https://github.com/midudev/) para la comunidad.
