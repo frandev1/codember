@@ -1,4 +1,4 @@
-'''
+"""
 Desafío 2: Detectando acceso no deseado
 
 - Sólo usa letras minúsculas y dígitos.
@@ -14,40 +14,43 @@ aabbcc   -> true (repite pero siempre ascendente)
 a123     -> false (un número después de una letra)
 123abc   -> true
 dbce     -> false (una "d" y después una "b")
-'''
+"""
 
-def unwantedAccess (password: str):
-    for i in range(1, len(password)-1):
+
+def unwantedAccess(password: str):
+    for i in range(1, len(password) - 1):
         if password[i].isdigit():
-            if password[i-1].isalpha():
+            if password[i - 1].isalpha():
                 return False
-            elif (int(password[i]) < int(password[i-1])):
-                return False 
+            elif int(password[i]) < int(password[i - 1]):
+                return False
         else:
             if password[i].isupper():
                 return False
-            elif (ord(password[i]) < ord(password[i-1])):
+            elif ord(password[i]) < ord(password[i - 1]):
                 return False
-    return True;
+    return True
 
-def main ():
+
+def tests():
+    print("1234-> ", unwantedAccess("1234"))
+    print("abc-> ", unwantedAccess("abc"))
+    print("aabbcc-> ", unwantedAccess("aabbcc"))
+    print("112233-> ", unwantedAccess("112233"))
+    print("a123-> ", unwantedAccess("a123"))
+    print("123abc-> ", unwantedAccess("123abc"))
+    print("dbce-> ", unwantedAccess("dbce"))
+
+
+if __name__ == "__main__":
+    tests()
+
     with open("Codember-2024/Challenge01/log.txt", "r") as file:
-        true = 0;
-        false = 0;
+        true = 0
+        false = 0
         for linea in file:
-            if (unwantedAccess(linea)):
-                true += 1;
+            if unwantedAccess(linea):
+                true += 1
             else:
-                false += 1;
-        print(f'submit {true}true{false}false');
-
-
-print('1234-> ',unwantedAccess('1234'));
-print('abc-> ', unwantedAccess('abc'));
-print('aabbcc-> ', unwantedAccess('aabbcc'));
-print('112233-> ', unwantedAccess('112233'));
-print('a123-> ', unwantedAccess('a123'));
-print('123abc-> ', unwantedAccess('123abc'));
-print('dbce-> ', unwantedAccess('dbce'));
-
-main();
+                false += 1
+        print(f"submit {true}true{false}false")

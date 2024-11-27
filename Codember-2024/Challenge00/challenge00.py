@@ -1,4 +1,4 @@
-'''
+"""
 Desafío 1: ¡Consigue acceso a la terminal!
 
 El número de la izquierda es la combinación inicial y las cadenas
@@ -21,33 +21,38 @@ una U, pasará a 0. Y si es D y ese dígito es 0, pasará a ser 9.
 9999 LULULULD -> 8000
 
 528934712834 URDURUDRUDLLLLUUDDUDUDUDLLRRRR
-'''
+"""
 
 
-def descifrar(num : str, code: str):
-    res = list(num);
-    pos = 0;
-    act = int(res[pos]);
+def decode(num: str, code: str):
+    res = list(num)
+    pos = 0
+    act = int(res[pos])
     for i in code:
-        act = int(res[pos]);
+        act = int(res[pos])
         match i:
-            case 'R':
-                pos += 1;
-            case 'L':
-                pos -= 1;
-            case 'U':
-                act += 1;
-                act %= 10;
+            case "R":
+                pos += 1
+            case "L":
+                pos -= 1
+            case "U":
+                act += 1
+                act %= 10
                 res[pos] = str(act)
-            case 'D':
+            case "D":
                 if act == 0:
-                    act = 9;
+                    act = 9
                 else:
-                    act -= 1;
+                    act -= 1
                 res[pos] = str(act)
     return "".join(res)
 
-print('000 URURD -> ',descifrar('000', 'URURD'))
-print('1111 UUURUUU -> ',descifrar('1111', 'UUURUUU'))
-print('9999 LULULULD -> ',descifrar('9999', 'LULULULD'))
-print('528934712834 URDURUDRUDLLLLUUDDUDUDUDLLRRRR -> ', descifrar('528934712834', 'URDURUDRUDLLLLUUDDUDUDUDLLRRRR'))
+
+if __name__ == "__main__":
+    print("000 URURD -> ", decode("000", "URURD"))
+    print("1111 UUURUUU -> ", decode("1111", "UUURUUU"))
+    print("9999 LULULULD -> ", decode("9999", "LULULULD"))
+    print(
+        "528934712834 URDURUDRUDLLLLUUDDUDUDUDLLRRRR -> ",
+        decode("528934712834", "URDURUDRUDLLLLUUDDUDUDUDLLRRRR"),
+    )
