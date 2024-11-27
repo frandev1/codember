@@ -12,8 +12,8 @@ cumplen con estas condiciones y determinar cuál es el tercer número que cumple
 con ellas al recorrer la lista en orden ascendente.
 '''
 import sys
-sys.path.append('Codember-2024/')
-from Challenge03.challenge03 import safeNodes
+sys.path.append('Codember-2024/Challenge03/')
+from challenge03 import safeNodes
 
 def isPrime(num: int):
     for i in range(2, num):
